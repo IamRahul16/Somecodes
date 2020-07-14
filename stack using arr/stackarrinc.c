@@ -1,13 +1,13 @@
 #include <stdio.h>
 #define MAXSIZE 101
-int A[MAXSIZE];
-int top = -1;
+int A[MAXSIZE]; 
+int top = -1;   //initialize the top
 
 void push(int x)
 {
     if(top==MAXSIZE-1)
     {
-        printf("Error: Stack overflow");
+        printf("Error: Stack overflow"); // stack is full
         return;
     }
     A[++top] = x;
@@ -17,7 +17,7 @@ void pop()
 {
     if(top==-1)
     {
-        printf("Error : Stack Underflow");
+        printf("Error : Stack Underflow"); //stack is empty
         return;
     }
     top--;
@@ -30,8 +30,8 @@ int Top()
 
 int isEmpty()
 {
-    if(top==-1) return 1;
-    return 0;
+    if(top==-1) return 1; //true
+    return 0;  //false
 }
 
 void print()
@@ -46,6 +46,7 @@ void print()
 
 int main()
 {
+    //print function is used to check the implementation
     push(10);print();
     push(5);print();
     push(7);print();
